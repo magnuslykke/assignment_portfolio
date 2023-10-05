@@ -9,6 +9,7 @@
 
 .blank {
   display: block;
+  background-color: var(--color-backgroundwhite);
 }
 
 .text {
@@ -40,10 +41,10 @@ button {
 }
 
 @container card (width > 340px) {
-  .card_header {
+  .card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .color {
@@ -51,7 +52,41 @@ button {
   }
 
   img {
+    grid-column: 1/3;
+    grid-row: 1/5;
+    width: 100%;
+  }
+
+  .blank {
+    grid-column: 2/3;
+  }
+
+  .text {
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-top: 5rem;
+  }
+}
+/* button {
+  background-color: var(--color-secondary);
+} */
+
+@container card (width > 850px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .color {
+    display: block;
     grid-column: 1/2;
+    grid-row: 1/5;
+  }
+
+  img {
+    grid-column: 2/3;
+    grid-row: 1/5;
     width: 100%;
   }
 

@@ -59,20 +59,144 @@ nav ul li a {
 h1 {
   font-family: var(--font-display);
   font-size: 3rem;
+  font-weight: 700 bold;
 }
 
 h2 {
   font-family: var(--font-paragraph);
+  font-size: 1.7rem;
 }
 
 h3 {
   font-family: var(--font-paragraph);
+  font-size: 1.3rem;
 }
 
 p {
   font-family: var(--font-paragraph);
+  font-size: 1rem;
 }
 
 .beskrivelse {
   margin: 3rem;
+}
+
+/* her under er style tile  */
+
+.main_index {
+  margin: 2rem;
+}
+
+.primary1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-primary);
+  border: #d5d5d5 solid 1px;
+}
+
+.primary2 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-backgroundwhite);
+  border: #d5d5d5 solid 1px;
+}
+
+.secondary1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-secondary);
+  border: #d5d5d5 solid 1px;
+}
+
+.secondary2 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-secondary2);
+  border: #d5d5d5 solid 1px;
+}
+
+.accent1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-accent);
+  border: #d5d5d5 solid 1px;
+}
+
+.color_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.colors {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.font_header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.display_tekst {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.card_wrapper {
+  container: card/inline-size;
+}
+
+@container card (width < 440px) {
+  .card {
+  }
+  .color_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container card (width > 440px) {
+  .card {
+  }
+  .color_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .primary1 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-primary);
+    border: #d5d5d5 solid 1px;
+  }
+
+  .primary2 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-backgroundwhite);
+    border: #d5d5d5 solid 1px;
+  }
+
+  .secondary1 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-secondary);
+    border: #d5d5d5 solid 1px;
+  }
+
+  .secondary2 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-secondary2);
+    border: #d5d5d5 solid 1px;
+  }
+
+  .accent1 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-accent);
+    border: #d5d5d5 solid 1px;
+  }
 }
