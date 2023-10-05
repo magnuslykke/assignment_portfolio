@@ -1,16 +1,61 @@
-.card-wrapper {
-  container-type: inline-size;
-}
-
-.card_header {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.card_wrapper {
+  container: card/inline-size;
 }
 
 .color {
   background-color: var(--color-accent);
+  display: block;
 }
 
-img {
-  inline-size: 100%;
+.blank {
+  display: block;
+}
+
+.text {
+  margin: 2rem;
+}
+
+button {
+  background-color: var(--color-accent); /* Baggrundsfarve (du kan ændre farven efter behov) */
+  color: #fff; /* Tekstfarve */
+  padding: 10px 20px; /* Polstring (tilpas størrelsen efter behov) */
+  border: none; /* Fjern standardkanten */
+  border-radius: 5px; /* Runde hjørner (tilpas efter behov) */
+  cursor: pointer; /* Vis en pegefingerkursoren ved hover */
+}
+
+@container card (width < 340px) {
+  img {
+    inline-size: 100%;
+    grid-column: 1/4;
+    max-height: 350px;
+  }
+  .blank {
+    display: none;
+  }
+
+  .color {
+    display: none;
+  }
+}
+
+@container card (width > 340px) {
+  .card_header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .color {
+    display: none;
+  }
+
+  img {
+    grid-column: 1/2;
+    width: 100%;
+  }
+
+  button {
+    background-color: var(--color-secondary);
+  }
 }
