@@ -1,0 +1,132 @@
+/* .card-wrapper {
+  width: 500px;
+  margin: 10px;
+  padding: 0px;
+  background-color: var(--color-primary);
+  border-radius: 40px;
+} */
+
+.card-wrapper {
+  container: card/inline-size;
+}
+
+.card {
+  margin: 20px;
+  padding: 10px;
+  max-width: 865px;
+  background-color: var(--color-primary);
+}
+
+.person {
+  inline-size: 100%;
+  /* width: 100%; */
+
+  display: block;
+}
+
+@container card(width < 340px) {
+  .person {
+    padding: 0rem;
+    max-width: 100%;
+  }
+}
+
+/* @container card (width > 340px) {
+  .card_header {
+    display: flex;
+  }
+  .person {
+    padding: 1rem;
+    max-width: 30%;
+  }
+} */
+
+@container card (width > 340px) {
+  .card_header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .name {
+    padding-left: 3rem;
+  }
+  .main_p {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+  .person {
+    padding: 1rem;
+    max-width: 100%;
+    inline-size: 100%;
+  }
+  .contact {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+}
+
+@container card (width > 515px) {
+  .card_header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .person {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .name {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  .main_p {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding-left: 3rem;
+  }
+  .contact {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-left: 1rem;
+  }
+}
+
+@container card (width > 690px) {
+  .person {
+    padding: 0;
+    margin: -1rem;
+  }
+}
+
+.contact {
+  background-color: var(--color-secondary2);
+  display: flex; /* Brug flexbox for at centrere indholdet */
+  flex-direction: column;
+  align-items: center; /* Centrer elementerne i midten af skærmen */
+  text-align: center; /* Centrer tekst inden i div'en */
+}
+
+.icon_flex {
+  display: flex;
+}
+
+.icon_container {
+  background-color: var(--color-accent); /* Baggrundsfarve (du kan ændre farven efter behov) */
+  border-radius: 50%; /* Gør div'en rund ved at bruge border-radius */
+  width: 50px; /* Juster bredden efter dit behov */
+  height: 50px; /* Juster højden efter dit behov */
+  display: flex; /* Gør det indre indhold centralt ved at bruge flexbox */
+  align-items: center; /* Centrerer indholdet vertikalt */
+  justify-content: center; /* Centrerer indholdet horisontalt */
+  margin: 10px; /* Tilføj margin mellem div'erne efter behov */
+}
+
+.icon {
+  max-width: 50%; /* Juster billedets størrelse efter behov */
+  height: auto; /* Behold billedets proportioner */
+  display: block; /* Fjern ekstra mellemrum under billedet */
+  margin: 0 auto; /* Centrer billedet indeni div'en */
+}
+
+/* .card-wrapper {
+  outline: 1px solid red;
+} */

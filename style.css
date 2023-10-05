@@ -1,0 +1,78 @@
+/* Nulstil standardmargener og padder */
+body,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-backgroundwhite);
+}
+
+:root {
+  --font-paragraph: "Montserrat", sans-serif;
+  --font-display: "Cormorant", serif;
+  --color-primary: #f8f8fa;
+  --color-backgroundwhite: #eae8f4;
+  --color-secondary: #17181d;
+  --color-secondary2: #e5d8c4;
+  --color-accent: #e10e26;
+  --color-paragraphwhite: #ffffff;
+}
+
+/* Grundlæggende stil for headeren */
+header {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-paragraph);
+}
+
+/* Stil for headeroverskriften */
+a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Stil for navigationselementer */
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: var(--font-paragraph);
+}
+
+h3 {
+  font-family: var(--font-paragraph);
+}
+
+p {
+  font-family: var(--font-paragraph);
+}
+
+.beskrivelse {
+  margin: 3rem;
+}

@@ -1,0 +1,16 @@
+.card-wrapper {
+  container-type: inline-size;
+}
+
+.card_header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.color {
+  background-color: var(--color-accent);
+}
+
+img {
+  inline-size: 100%;
+}

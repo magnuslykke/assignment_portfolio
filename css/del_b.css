@@ -1,0 +1,125 @@
+/* .card {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 4rem;
+} */
+
+.card_primary {
+  /* width: 400px; */
+  /* border-radius: 50%; */
+  /* background-color: blue; */
+  margin: 2rem;
+}
+.small_card {
+  margin: 2rem;
+}
+.dame {
+  width: 30%;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.card_wrapper {
+  container: card/inline-size;
+}
+
+@container card (width > 500px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 4rem;
+  }
+
+  .card_container {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin: 1rem;
+  }
+
+  .dame {
+    width: 40%;
+  }
+  .card_primary {
+    margin: 1rem;
+  }
+
+  .small_card {
+    margin: 0rem;
+    /* width: 10rem; */
+    flex: 30%;
+  }
+
+  .circle-button {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+  }
+}
+
+.card_primary_top {
+  background-color: var(--color-secondary2);
+  padding: 10px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  /* font-family: var(--font-display); */
+}
+
+.circle-buttons {
+  background-color: var(--color-secondary);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.circle-button {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.cirkel {
+  width: 20px;
+  height: 20px;
+  border: solid white;
+  border-radius: 50%;
+}
+
+.cirkel:hover {
+  background-color: var(--color-accent);
+}
+
+.button-label {
+  font-family: var(--font-paragraph);
+  color: var(--color-paragraphwhite);
+  padding: 0px 0px 0px 10px;
+}
+
+.card_container {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 10px; */
+}
+
+.card_header {
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-paragraphwhite);
+  font-family: var(--font-paragraph);
+  padding: 0px 20px 0px 20px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hours_specifyer {
+  background-color: var(--color-secondary2);
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+}
