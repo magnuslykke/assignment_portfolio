@@ -56,6 +56,10 @@ nav ul li a {
   font-size: 18px;
 }
 
+li a:hover {
+  color: var(--color-accent);
+}
+
 h1 {
   font-family: var(--font-display);
   font-size: 3rem;
@@ -139,6 +143,11 @@ p {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.font_header_small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .display_tekst {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -154,6 +163,14 @@ p {
   .color_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .font_header {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -198,5 +215,9 @@ p {
     height: 150px;
     background-color: var(--color-accent);
     border: #d5d5d5 solid 1px;
+  }
+
+  .font_header_small {
+    display: none;
   }
 }
